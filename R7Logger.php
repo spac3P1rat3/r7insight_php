@@ -80,6 +80,7 @@ class R7Logger
                 }
                 break;
             case 'webhook':
+                //added seperate for now(yes I know basically dup of above), I was thinking ahead of adding pre-run checks specific to webhooks
                 if (! isset(self::$m_instance[$token])) {
                     self::$m_instance[$token] = new R7Logger($token, $region, $persistent, $ssl, $severity, $datahubEnabled, $datahubIPAddress, $datahubPort, $host_id, $host_name, $host_name_enabled, $add_local_timestamp, $use_json, $type, $api_key);
                 }
